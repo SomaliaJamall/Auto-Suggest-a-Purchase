@@ -15,13 +15,15 @@ Automatically places holds for patrons once a material is acqiured.
 
 ## Installation Using Docker
 
-### Choose your deployment environement
+### Choose your deployment environment
 
-This will depend strongly on your setup. This plays nicely on a linux server, and works on Windows IIS as well. Clone the repository. You can use the [Github Command Line interface](https://cli.github.com/) for this with:
+Decide where you will host ASAP. ASAP works great either in the cloud or on your internal servers. ASAP plays nicely on a linux server, and works on Windows IIS as well. Clone the repository. You can use the [Github Command Line interface](https://cli.github.com/) for this with:
 
 ```
 gh repo clone SomaliaJamall/Auto-Suggest-a-Purchase
 ```
+
+The Patron form needs to be publically accessible, the staff side you may chose to only have accessible on your staff network.
 
 ### 1. Define your environement 
 
