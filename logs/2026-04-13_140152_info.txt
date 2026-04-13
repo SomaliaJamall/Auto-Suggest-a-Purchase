@@ -1,0 +1,7 @@
+
+----Hold placed with holds existing 
+{'id': 3, 'barcode': 'FJP0004536364', 'title': 'Homie', 'author': 'Danez Smith', 'identifier': '9781644450109', 'format': 0, 'publication': '2026-04-01', 'autohold': 1, 'status': 1, 'created': '2026-04-13 18:55:38', 'agegroup': 0, 'editedBy': 'sjamall', 'notes': '', 'bibid': ''}
+{'PAPIErrorCode': 0, 'ErrorMessage': '', 'RequestGUID': None, 'TxnGroupQualifer': None, 'TxnQualifier': None, 'StatusType': 1, 'StatusValue': 0, 'Message': 'An error occurred processing the status or error report message.  Request was not placed. The statement has been terminated. The DELETE statement conflicted with the REFERENCE constraint "fk_SysHoldRequests_ILL$Messages". The conflict occurred in database', 'QueuePosition': 0, 'QueueTotal': 0}
+----hold placed and email sent to  somaliajamall@gmail.com
+{'id': 3, 'barcode': 'FJP0004536364', 'title': 'Homie', 'author': 'Danez Smith', 'identifier': '9781644450109', 'format': 0, 'publication': '2026-04-01', 'autohold': 1, 'status': 1, 'created': '2026-04-13 18:55:38', 'agegroup': 0, 'editedBy': 'sjamall', 'notes': '', 'bibid': ''}
+{'PAPIErrorCode': 0, 'ErrorMessage': '', 'RequestGUID': '0478281C-B7C3-4EB3-BA9A-B2743786C6D8', 'TxnGroupQualifer': 'NWZIKUMYkegICqqWnnNR3a', 'TxnQualifier': 'JXYDOwiV4uA8afE_hAKRTq', 'StatusType': 2, 'StatusValue': 1, 'Message': 'Your request has been placed.', 'QueuePosition': 1, 'QueueTotal': 1}

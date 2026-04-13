@@ -1,0 +1,32 @@
+# HTML
+# Archive your static HTML project and save it with the build record.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- $(Build.SourceBranchName)
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.sourcesDirectory)/deploy-staff/PHP'
+    Contents: '**'
+    TargetFolder: '$(build.sourcesDirectory)/deploy-patron/PHP'
+
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(build.sourcesDirectory)/deploy-staff'
+    includeRootFolder: false
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-staff.zip'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(build.sourcesDirectory)/deploy-patron'
+    includeRootFolder: false
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-patron.zip'
+
+- task: PublishBuildArtifacts@1

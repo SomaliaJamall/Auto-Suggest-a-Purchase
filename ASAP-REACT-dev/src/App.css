@@ -1,0 +1,12 @@
+.Mui-even{
+    background-color: rgba(25, 118, 210, 0.2);
+}
+
+
+.Mui-even:hover{
+    background-color: rgba(25, 118, 210, 0.3) !important;
+}
+
+.Mui-odd:hover{
+    background-color: rgba(0,0,0, 0.1) !important;
+}

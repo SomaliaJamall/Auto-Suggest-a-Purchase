@@ -1,0 +1,4 @@
+
+----placeHold failed 04/13/2026
+{'id': 2, 'barcode': 'FJP0004536364', 'title': 'Homie', 'author': 'Danez Smith', 'identifier': '9781644450109', 'format': 0, 'publication': '2026-04-01', 'autohold': 1, 'status': 1, 'created': '2026-04-13 18:53:20', 'agegroup': 0, 'editedBy': 'sjamall', 'notes': '', 'bibid': ''}
+{'PAPIErrorCode': 0, 'ErrorMessage': '', 'RequestGUID': '', 'TxnGroupQualifer': '', 'TxnQualifier': '', 'StatusType': 1, 'StatusValue': 6, 'Message': 'The request cannot be placed because a duplicate request has been found.  Please check your account.', 'QueuePosition': 0, 'QueueTotal': 0}

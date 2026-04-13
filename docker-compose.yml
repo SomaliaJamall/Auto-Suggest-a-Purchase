@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  web_server:
+    build: ./deploy-staff
+    container_name: web_server
+    ports:
+      - 80:80
+    volumes:
+      - ./deploy-staff:/var/www/html
+      - ./deploy-patron:/var/www/html/patron
+      - ./staff.ini:/var/www/html/private/staff.ini
+      - ./.private_htaccess:/var/www/html/private/.htaccess
+    working_dir: /var/www/html
+    depends_on:
+      - db
+
+# Database (MariaDB)
+  db:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: ASAP_PW
+      MARIADB_DATABASE: ASAP
+      MARIADB_USER: user
+      MARIADB_PASSWORD: user_password
+    volumes:
+      - ./db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  db_data:

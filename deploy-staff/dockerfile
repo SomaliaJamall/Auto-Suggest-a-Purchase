@@ -1,0 +1,28 @@
+# 1. Use the official PHP Apache base image
+FROM php:8.2-apache
+
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+RUN docker-php-ext-enable mysqli
+
+# 2. Set the working directory inside the container
+WORKDIR /var/www/html
+
+# 3. Install system dependencies and PHP extensions (e.g., MySQL support)
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    zip \
+    unzip \
+    python3 \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+
+# 4. Copy your application files to the container
+COPY . /var/www/html
+
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
+# 5. Give Apache permission to write to your files (if needed)
+RUN chown -R www-data:www-data /var/www/html
+
+EXPOSE 9000
