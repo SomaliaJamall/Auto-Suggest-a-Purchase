@@ -89,7 +89,11 @@ The staff dashboard will be served on port 80 (standard) of the host. Only the s
 The patron form lives at HOSTADDRESS/patron. This form is made to be inserted as an iframe into your existing library website, so make sure the host is publically accessible.
 
 ### Automate script to check when hold can be placed
-Schedule python3 [ROOT_DIR]/check_list_for_purchase.py
+Schedule the "check for purchase" script to run at least nightly
+```
+python3 [ROOT_DIR]/check_list_for_purchase.py
+```
+
 
 ## Support
 
