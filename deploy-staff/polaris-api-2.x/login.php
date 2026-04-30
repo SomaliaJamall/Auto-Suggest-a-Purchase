@@ -35,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   try {
     $result = $client->staff->auth();
+    var_dump($result);
     if ($result->PAPIErrorCode < 0) {
-      var_dump($result->PAPIErrorCode);
       $message = "Auth failed";
       $exception = new Exception($message);
       echo "Polaris didn't like that";
