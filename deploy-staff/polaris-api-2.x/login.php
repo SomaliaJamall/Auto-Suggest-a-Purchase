@@ -28,17 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $normalizeName = strtolower($data->username);
 
-  $allowedUsers=[
-    "sstokes",
-    "smcclain",
-    "jhaile",
-    "bblanchard",
-    "dfranke",
-    "jacquelinep",
-    "jacobson",
-    "dwillman",
-    "sjamall"
-  ];
+  $allowedUsers=[];
+  foreach ($ini_array["user"] as $user) {
+    $allowedUsers[]=$user;
+}
 
   try {
     $result = $client->staff->auth();
