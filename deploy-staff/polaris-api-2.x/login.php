@@ -11,6 +11,8 @@ use RCPL\Polaris\Client;
 
 $ini_array = parse_ini_file($_SERVER["DOCUMENT_ROOT"] . "/private/staff.ini");
 
+var_dump($ini_array);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $jsonData = file_get_contents('php://input');
   $data = json_decode($jsonData);
