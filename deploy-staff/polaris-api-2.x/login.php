@@ -33,6 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $allowedUsers[]=$user;
 }
 
+var_dump( $allowedUsers);
+
   try {
     $result = $client->staff->auth();
     if ($result->PAPIErrorCode < 0) {
