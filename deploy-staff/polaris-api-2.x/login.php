@@ -11,7 +11,6 @@ use RCPL\Polaris\Client;
 
 $ini_array = parse_ini_file($_SERVER["DOCUMENT_ROOT"] . "/private/staff.ini");
 
-var_dump($ini_array);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $jsonData = file_get_contents('php://input');
@@ -37,11 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   try {
     $result = $client->staff->auth();
-    var_dump($result);
     if ($result->PAPIErrorCode < 0) {
       $message = "Auth failed";
       $exception = new Exception($message);
-      echo "Polaris didn't like that";
       throw $exception;
     }
 
@@ -61,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo $json_output;
   } catch (Throwable $e) {
     echo "some high level error";
+    var_dump($result);
     http_response_code(402);
     echo "Auth failed";
   }
