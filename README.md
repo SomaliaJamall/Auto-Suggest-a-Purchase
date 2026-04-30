@@ -27,7 +27,7 @@ The Patron form needs to be publically accessible, the staff side you may chose 
 
 ### 1. Define your environement 
 
-Create a .staff.ini in the project root with the following information
+In the ./configs folder create a staff.ini file in it  with the following information
 
 ```ini
 [API]

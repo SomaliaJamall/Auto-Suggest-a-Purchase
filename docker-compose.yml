@@ -8,7 +8,7 @@ services:
     volumes:
       - ./deploy-staff:/var/www/html
       - ./deploy-patron:/var/www/html/patron
-      - ./staff.ini:/var/www/html/private/staff.ini
+      - ./configs:/var/www/html/private
       - ./.private_htaccess:/var/www/html/private/.htaccess
     working_dir: /var/www/html
     depends_on:
