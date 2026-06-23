@@ -2,9 +2,9 @@
 
 # Auto Suggest a Purchase
 
-A system for managing patron holds that assist with collecting a filtering material suggestions and tracking purchase status.
+A system for managing patron holds that assist with collecting and filtering material suggestions and tracking purchase status.
 
-Automatically places holds for patrons once a material is acqiured.
+Automatically places holds for patrons once a material is acqiured leveraging Polaris API.
 
 ## Table of Contents
 
