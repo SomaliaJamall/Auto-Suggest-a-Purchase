@@ -42,7 +42,8 @@ export default defineConfig({
     emptyOutDir: false,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html')
+        main: resolve(__dirname, 'index.html'),
+        nyt: resolve(__dirname, 'NYT/index.html'),
       },
     },
   }

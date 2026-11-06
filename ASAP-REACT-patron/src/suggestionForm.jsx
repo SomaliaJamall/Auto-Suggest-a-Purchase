@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import CircularProgress from '../node_modules/@mui/material/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 import * as Constants from './assets/Constants';
 import CheckIcon from '@mui/icons-material/Check';
 import ErrorIcon from '@mui/icons-material/Error';
